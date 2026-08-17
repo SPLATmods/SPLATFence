@@ -1,9 +1,3 @@
-// in SPLATFenceCore.c
-
-
-
-
-
 class SPLATFenceCore extends BaseBuildingBase
 {
     const float MAX_ACTION_DETECTION_ANGLE_RAD = 1.3; // ~75 degrees
