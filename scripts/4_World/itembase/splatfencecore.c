@@ -166,6 +166,7 @@ class SPLATFenceCore extends BaseBuildingBase
 
     override void OnPartBuiltServer(notnull Man player, string part_name, int action_id)
     {
+        Print("SPLATFence DEBUG: OnPartBuiltServer CALLED, part_name=" + part_name);
         super.OnPartBuiltServer(player, part_name, action_id);
         UpdateVisuals();
         
@@ -194,5 +195,42 @@ class SPLATFenceCore extends BaseBuildingBase
     {
         super.OnPartDismantledClient(part_name, action_id);
         SoundDismantleStart(part_name);
+    }
+
+    override void EEOnAfterLoad()
+    {
+        Print("SPLATFence DEBUG: EEOnAfterLoad ENTER, HasBase()=" + HasBase());
+        super.EEOnAfterLoad();
+        Print("SPLATFence DEBUG: EEOnAfterLoad AFTER super, HasBase()=" + HasBase());
+    }
+
+    override void OnCreatePhysics()
+    {
+        Print("SPLATFence DEBUG: OnCreatePhysics ENTER, HasBase()=" + HasBase());
+        super.OnCreatePhysics();
+        Print("SPLATFence DEBUG: OnCreatePhysics AFTER super, HasBase()=" + HasBase());
+    }
+
+    override void AfterStoreLoad()
+    {
+        Print("SPLATFence DEBUG: AfterStoreLoad ENTER, HasBase()=" + HasBase());
+        super.AfterStoreLoad();
+        Print("SPLATFence DEBUG: AfterStoreLoad AFTER super, HasBase()=" + HasBase());
+        //UpdatePhysics();
+    }
+
+    override void UpdatePhysics()
+    {
+        Print("SPLATFence DEBUG: UpdatePhysics CALLED, HasBase()=" + HasBase());
+        
+        ConstructionPart base_part = GetConstruction().GetConstructionPart("base");
+        if (base_part)
+            Print("SPLATFence DEBUG: base part IsBuilt()=" + base_part.IsBuilt());
+        else
+            Print("SPLATFence DEBUG: base part NOT FOUND");
+        
+        super.UpdatePhysics();
+        
+        Print("SPLATFence DEBUG: UpdatePhysics FINISHED");
     }
 }

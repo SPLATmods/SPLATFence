@@ -7,8 +7,8 @@ class CfgPatches
 		requiredAddons[] = 
 		{
 			"DZ_Data",
-			"DZ_Scripts"
-			
+			"DZ_Scripts",
+			"DZ_Gear_Consumables"
 		};
 	};
 };
@@ -56,11 +56,49 @@ class CfgMods
 };
 
 //Custom slots to set max slot quanitiy
+class CfgSlots
+{
+	class Slot_Material_WoodenLogs;
+	class Slot_SPLAT_Material_WoodenLogs : Slot_Material_WoodenLogs
+	{
+		name = "SPLAT_Material_WoodenLogs";
+		stackMax = 20;
+	};
 
+	class Slot_Material_WoodenPlanks;
+	class Slot_SPLAT_Material_WoodenPlanks : Slot_Material_WoodenPlanks
+	{
+		name = "SPLAT_Material_WoodenPlanks";
+		stackMax = 55;
+	};
+
+
+
+}
 
 class CfgVehicles
 {
 	//Add custom slot to the item so that it allows the item in the slot
+	class Inventory_Base;
+	class WoodenLog: Inventory_Base
+	{
+		
+		inventorySlot[]+=
+		{
+			"SPLAT_Material_WoodenLogs"
+		};
+		
+	};
+	
+		class WoodenPlank: Inventory_Base
+	{
+		
+		inventorySlot[]+=
+		{
+			"SPLAT_Material_WoodenPlanks"
+		};
+		
+	};
 	
 	//Fence
 	class BaseBuildingBase;
@@ -269,9 +307,9 @@ class CfgVehicles
 		
 		attachments[]=
 		{
-			"Material_WoodenLogs",
+			"SPLAT_Material_WoodenLogs",
 			"Material_Nails",
-			"Material_WoodenPlanks",
+			"SPLAT_Material_WoodenPlanks",
 			"Material_FPole_Rope"
 		};
 
@@ -283,9 +321,9 @@ class CfgVehicles
 				description="";
 				attachmentSlots[]=
 				{	
-					"Material_WoodenLogs",
+					"SPLAT_Material_WoodenLogs",
 					"Material_Nails",
-					"Material_WoodenPlanks",
+					"SPLAT_Material_WoodenPlanks",
 					"Material_FPole_Rope"
 				};
 				icon="set:dayz_inventory image:cat_bb_base";
@@ -334,7 +372,7 @@ class CfgVehicles
 						class Material1
 						{
 							type="WoodenLog";
-							slot_name="Material_WoodenLogs";
+							slot_name="SPLAT_Material_WoodenLogs";
 							quantity=2;
 							//16
 							//lockable=1;
@@ -342,7 +380,7 @@ class CfgVehicles
 						class Material2
 						{
 							type="WoodenPlank";
-							slot_name="Material_WoodenPlanks";
+							slot_name="SPLAT_Material_WoodenPlanks";
 							quantity=10;
 							//25
 							//lockable=1;
