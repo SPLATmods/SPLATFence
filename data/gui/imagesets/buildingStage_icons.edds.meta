@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{FC7F448E8D7D9B53}SPLATMods Files/SPLATFence/data/gui/imagesets/buildingStage_icons.edds"
+ Author "desktop-uq064kg"
+ ChangeDate 1874146593
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "buildingStage_icons.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

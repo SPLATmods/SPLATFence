@@ -1,0 +1,26 @@
+ImageSetClass {
+ Name "splatfence_buildingStage_icons"
+ RefSize 512 512
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "SPLATFence/data/gui/imagesets/buildingStage_icons.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass SPLATFence_Base {
+   Name "SPLATFence_Base"
+   Pos 0 0
+   Size 256 256
+   Flags 0
+  }
+  ImageSetDefClass SPLATFence_Fence {
+   Name "SPLATFence_Fence"
+   Pos 256 0
+   Size 256 256
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}
