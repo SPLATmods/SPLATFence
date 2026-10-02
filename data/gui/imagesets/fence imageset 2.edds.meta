@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C3A19EB1D07E13FD}SPLATMods Files/SPLATFence/data/gui/imagesets/fence imageset 2.edds"
+ Author "desktop-uq064kg"
+ ChangeDate 1170978114
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "fence imageset 2.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

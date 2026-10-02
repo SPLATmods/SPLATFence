@@ -1,0 +1,26 @@
+ImageSetClass {
+ Name "newIcons2"
+ RefSize 1774 887
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{C3A19EB1D07E13FD}SPLATFence/data/gui/imagesets/fence imageset 2.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass SPLATFence_Fence {
+   Name "SPLATFence_Fence"
+   Pos 70 0
+   Size 887 887
+   Flags 0
+  }
+  ImageSetDefClass SPLATFence_Base {
+   Name "SPLATFence_Base"
+   Pos 840 0
+   Size 887 887
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}
